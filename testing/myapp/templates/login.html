@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+">
+ <!-- {% load static %}
+  <link rel="stylesheet" href="{% static 'demo.css' %}"> -->
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            letter-spacing: 1.5px;
+            
+             
+        
+        }
+        body{
+             -background:linear-gradient(135deg,#3877ff,#262525 100%);
+             -height: 100vh;
+            background-image: url("{% static 'image/samir.png' %}");
+            -width: 100%;
+            background-size: cover;
+            }
+        
+         
+        button{
+    background-image: url("");
+    width: 15rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: .3rem solid white; 
+    box-shadow: 0 0 1rem #fff,
+    inset 0 0 1rem #fff,
+     0 0 2rem #3877ff,
+    inset  0 0  2rem #3877ff,   
+    0 0 4rem #3877ff,
+    
+
+        }
+         button a{
+            text-decoration: none;
+            color: white;
+         }
+         .imagedata{
+            margin-top: 120px;
+         }
+
+
+        
+        
+    </style>
+</head>
+<body>
+    
+<div class="imagedata d-flex justify-content-center align-items-center w-100 h-100  ">
+    <form action="" method="post" class="-border -border-2 -border-info  mx-auto p-4  w-50 shadow rounded-4 " enctype="multipart/form-data"  >
+        {% csrf_token %}
+
+        <h1 class="text-center">LOGIN FORM</h1>
+        <div>
+            <label for="">Email</label>
+            <input type="text" class="form-control" name="email" >
+        </div>
+        <div class="mt-3">
+            <label for="">Password</label>
+            <input type="password" class="form-control " name="password">
+        </div>
+
+
+         <div class="mt-5">
+            
+         <button class=" btn btn-dark w-100 rounded-2" type="submit" > Submit</button> 
+        </div>
+
+<p style="color: red;">{{message}}</p>
+
+
+    </form>
+
+</div>
+
+
+
+    
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+</html>
