@@ -49,8 +49,8 @@ urlpatterns = [
 
     path('catCreate/',catCreate,name="catCreate"),
     path('catList/',catList,name="tablelist"),
-    path('catEdit/<str:id>',catEdit,name="catEdit"),
-    path('catDelete/<str:id>/', catDelete, name='catDelete'),
+    path('catEdit/<int:id>',catEdit,name="catEdit"),
+    path('catDelete/<int:id>/', catDelete, name='catDelete'),
     path('catImage/',catImage,name="catImage"),
 
     
@@ -60,8 +60,8 @@ urlpatterns = [
 
     path('article_view/',article_view,name='article_view'),   #article table
     path('article_viewdata/',articale_create,name='article_viewdata'),   #article form
-    path('article_delete/<id>/',articale_delete,name="articale_delete"), #article delete
-    path('articale_Edit/<id>/',articale_Edit,name="articale_Edit"),  #article edit
+    path('article_delete/<int:id>/',articale_delete,name="articale_delete"), #article delete
+    path('articale_Edit/<int:id>/',articale_Edit,name="articale_Edit"),  #article edit
 
     # path('articale_create/',articale_create,name='articale_create'),
 

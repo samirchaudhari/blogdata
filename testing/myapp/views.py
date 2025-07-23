@@ -204,7 +204,8 @@ def articale_create(request):
             title=title,
             image=image,
             status=status,
-            category=category_obj,
+            # category=category_obj,
+            catName=category_obj,  
             description=description
         )
         return redirect("article_view")
@@ -292,7 +293,7 @@ def articale_Edit(request, id):
             status=False
 
         try:
-            category_obj = MasterCategory.objects.get(id=category_id)
+            category_obj = MasterCategory.objects.get(catName=category_id)
         except MasterCategory.DoesNotExist:
             return render(request, "article/article_adit.html", {
                 "errorMsg": "Invalid category",
@@ -303,7 +304,7 @@ def articale_Edit(request, id):
         artData.title = title
         if image:
             artData.image = image
-        artData.category_id = category_obj
+        artData.category_id = category_id
         artData.description = description
         artData.status = status
 

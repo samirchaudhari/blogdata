@@ -40,7 +40,7 @@ class MasterCategory(models.Model):
 class article_master(models.Model):
     title=models.CharField(max_length=100)
     status=models.BooleanField(default=False)
-    category = models.ForeignKey(MasterCategory, on_delete=models.CASCADE) 
+    catName = models.ForeignKey(MasterCategory, on_delete=models.CASCADE) 
     image=models.ImageField(upload_to="image/")
     description=models.TextField()
     

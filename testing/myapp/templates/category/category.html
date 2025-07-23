@@ -8,19 +8,46 @@
       padding: 20px;
     }
     main {
-      background: linear-gradient(135deg,#3877ff,#262525 100%);
+      -background: linear-gradient(135deg,#3877ff,#262525 100%);
       min-height: 100vh;
     }
+
+
+    .table-wrapper {
+  background: linear-gradient(to right, rgba(30, 111, 94, 0.85), rgba(19, 67, 58, 0.85));
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.table-custom-green {
+  background-color: transparent;
+  color: white;
+}
+
+.table-custom-green th,
+.table-custom-green td {
+  background-color: transparent !important;
+  
+  color: white !important;
+  
+  border-color: rgba(255, 255, 255, 0.3);
+  -border: 2px solid #0e96bc   !important
+}
+
+
+
+
 </style>
 
 <main class="col-md-12  col-lg-12 px-md-4 dashboard-content">
-  <h2 class="text-center shadow-lg">Category</h2>
+  <h2 class="text-center shadow-lg">CATEGORY</h2>
 
   <button class="categoryb btn btn-warning">
     <a href="{% url 'category_viewdata' %}" style="text-decoration: none; color: rgb(0, 0, 0); font-weight: 800;">Add Data</a>
   </button>
 
-  <table class="table table-bordered table-dark text-center mt-4 shadow-lg table-hover">
+  <div class="table-wrapper mt-4 shadow-lg">
+  <table class="table  text-center  table-custom-green  ">
     
       <tr>
         <th>ID NO</th>
@@ -48,7 +75,7 @@
 
     {% endfor %}
   </table>
-
+</div>
 </main>
 
 {% endblock %}

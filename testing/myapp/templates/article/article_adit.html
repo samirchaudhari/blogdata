@@ -38,7 +38,7 @@
     <select id="category" name="category" required>
       <option value=" ">-- Select Category --</option>
       {% for i in categories %}
-      <option value="{{ i.id }}" {% if i.id == ArtDelete.i_id %}selected{% endif %}>{{ i.catName }}</option>
+      <option value="{{ i.catName }}" {% if i.id == ArtDelete.id %}selected{% endif %}>{{ i.catName }}</option>
 
      {% endfor %}
     </select>
@@ -66,7 +66,7 @@
 
     <label class="mt-2">STATUS</label>
     <div class="mt-1 d-flex align-items-center ">
-      <input type="checkbox" name="status" {% if categories.status %}checked{% endif %}>
+      <input type="checkbox" name="status" {% if ArtDelete.status %}checked{% endif %}>
 
 
 <!-- 

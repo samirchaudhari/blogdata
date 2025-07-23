@@ -7,20 +7,41 @@
     min-height: 100vh;
   }
 
-  table {}
+.table-wrapper {
+  background: linear-gradient(to right, rgba(30, 111, 94, 0.85), rgba(19, 67, 58, 0.85));
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.table-custom-green {
+  background-color: transparent;
+  color: white;
+}
+
+.table-custom-green th,
+.table-custom-green td {
+  background-color: transparent !important;
+  color: white !important;
+  border-color: rgba(23, 18, 18, 0.3);
+  -border: 1px solid #00f7ff   !important
+  
+
+}
+
 </style>
 
 <!-- Sidebar -->
 
 <!-- Main content -->
 <main class="col-md-12 ms-sm-auto col-lg-12 px-md-4 dashboard-content">
-  <h2 class="text-center shadow-lg ">Article </h2>
+  <h2 class="text-center shadow-lg ">ARTICLE </h2>
 
   <button class="btn btn-warning mt-3 "><a href="{% url 'article_viewdata'%}"
       style="text-decoration: none; color: rgb(0, 0, 0) ; font-weight: 800;">Add Data</a></button>
 
+<div class="table-wrapper mt-4 shadow-lg">
 
-  <table class="table table-bordered table-dark text-center mt-4 shadow-lg">
+  <table class="table -table-bordered text-center table-custom-green ">
     <tr>
       <th>NO</th>
       <th>IMAGE</th>
@@ -46,7 +67,7 @@
         {% endif %}
       </td>
       <!-- <td>{{ article.get_category_display }}</td> -->
-      <td>{{ article.category.catName }}</td>
+      <td>{{ article.catName.catName }}</td>
       <td>{{ article.title }}</td>
 
       <td>
@@ -78,6 +99,7 @@
 
   </table>
 
+</div>
 
 
 
