@@ -33,6 +33,7 @@ class MasterCategory(models.Model):
     catSlug = models.CharField(max_length=100)
     catStatus = models.BooleanField(default=True)
     catSeqNo = models.IntegerField()
+    
 
 
 

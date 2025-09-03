@@ -271,7 +271,6 @@ def articale_delete(request,id):
 #             artData.category_id=category
 #             artData.description=description
 #             artData.status=status
-
 #             artData.save()
 #             return redirect('article_view')
         
